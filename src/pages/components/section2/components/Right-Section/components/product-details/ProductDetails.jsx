@@ -4,7 +4,7 @@ import { styles } from "../../../../../../../styles/styles";
 import HoverRating from './components/HoverRating';
 import Sizes from './components/Sizes';
 import FAQs1 from './components/FAQs1';
-import './rightSection.css'; 
+import './rightSection.css';
 
 const sizes = [
     { id: 1, size: 'S' },
@@ -14,13 +14,13 @@ const sizes = [
 ];
 
 const ProductDetails = () => {
-    const [selectedSizes, setSelectedSizes] = useState([]); 
+    const [selectedSizes, setSelectedSizes] = useState([]);
 
     const handleSizeToggle = (id) => {
         setSelectedSizes((prevSelectedSizes) =>
             prevSelectedSizes.includes(id)
                 ? prevSelectedSizes.filter(sizeId => sizeId !== id)
-                : [...prevSelectedSizes, id] 
+                : [...prevSelectedSizes, id]
         );
     };
 

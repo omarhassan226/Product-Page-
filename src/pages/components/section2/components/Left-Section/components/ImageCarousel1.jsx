@@ -44,7 +44,7 @@ const ImageCarousel1 = () => {
             <Grid item xs={12} md={12} sx={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <IconButton
                     onClick={handlePrevious}
-                    sx={{ position: 'absolute', left: 0, zIndex: 1, backgroundColor:colors.green, color:colors.white }}
+                    sx={{ position: 'absolute', left: 0, zIndex: 1, backgroundColor: colors.green, color: colors.white }}
                 >
                     <ArrowBackIos />
                 </IconButton>
@@ -56,7 +56,7 @@ const ImageCarousel1 = () => {
                         height: '70vh',
                         width: '100%',
                         transition: 'background-size 0.3s, background-position 0.3s',
-                        cursor:'pointer'
+                        cursor: 'pointer'
                     }}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
@@ -64,7 +64,7 @@ const ImageCarousel1 = () => {
                 />
                 <IconButton
                     onClick={handleNext}
-                    sx={{ position: 'absolute', right: 0, zIndex: 1, backgroundColor:colors.green, color:colors.white }}
+                    sx={{ position: 'absolute', right: 0, zIndex: 1, backgroundColor: colors.green, color: colors.white }}
                 >
                     <ArrowForwardIos />
                 </IconButton>
@@ -77,15 +77,15 @@ const ImageCarousel1 = () => {
                             sx={{
                                 cursor: 'pointer',
                                 border: index === currentImageIndex ? '2px solid #3f51b5' : '2px solid transparent',
-                                display:'flex',
-                                width:'100%',
-                                height:'100%',
-                                justifyContent:'center', 
-                                alignItems:'center',
+                                display: 'flex',
+                                width: '100%',
+                                height: '100%',
+                                justifyContent: 'center',
+                                alignItems: 'center',
                             }}
                             onClick={() => setCurrentImageIndex(index)}
                         >
-                            <img src={image} alt={`Thumbnail ${index}`} style={{ width: '100%', height:'100%' }} />
+                            <img src={image} alt={`Thumbnail ${index}`} style={{ width: '100%', height: '100%' }} />
                         </Paper>
                     ))}
                 </Box>

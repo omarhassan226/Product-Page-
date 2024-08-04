@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { colors } from '../../colors/colors';
-// import './relatedSection.css'; 
 
 const RelatedProducts = () => {
     const relatedProducts = [

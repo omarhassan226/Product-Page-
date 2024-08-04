@@ -1,17 +1,11 @@
 import React, { useState } from "react";
-import {
-    Box,
-    Button,
-    Typography,
-    IconButton,
-    Paper
-} from "@mui/material";
+import { Box, Button, Typography, IconButton, Paper } from "@mui/material";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import { styled } from "@mui/system";
 import { colors } from "../../../../../colors/colors";
 import KeyFeatures from "./components/KeyFeatures";
-import './style.css';
+import "./style.css";
 
 const Header = styled(Box)({
     position: "relative",
@@ -20,7 +14,7 @@ const Header = styled(Box)({
     color: "white",
     textAlign: "center",
     overflow: "hidden",
-    '&:hover': { animation: "fire 1s linear infinite" },
+    "&:hover": { animation: "fire 1s linear infinite" },
     "& h1": {
         position: "relative",
         zIndex: 2,
@@ -45,11 +39,34 @@ const LastSection = () => {
 
     return (
         <>
-            <Header className="header slide-in-left3" sx={{ marginBottom: "10px", borderRadius: "10px", position: 'relative', cursor: 'pointer', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)' }}>
+            <Header
+                className="header slide-in-left3"
+                sx={{
+                    marginBottom: "10px",
+                    borderRadius: "10px",
+                    position: "relative",
+                    cursor: "pointer",
+                    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)"
+                }}
+            >
                 <img width={40} className="fire" src="fire10.png" alt="" />
-                <img width={60} className="fire1" src="fire10.png" alt="" style={{ position: 'absolute', left: '0', bottom: '0' }} />
-                <img width={60} className="fire2" src="fire10.png" alt="" style={{ position: 'absolute', right: '0', bottom: '0' }} />
-                <Typography variant="h6" sx={{ zIndex: 50 }}>Get 20% OFF Mega Sale</Typography>
+                <img
+                    width={60}
+                    className="fire1"
+                    src="fire10.png"
+                    alt=""
+                    style={{ position: "absolute", left: "0", bottom: "0" }}
+                />
+                <img
+                    width={60}
+                    className="fire2"
+                    src="fire10.png"
+                    alt=""
+                    style={{ position: "absolute", right: "0", bottom: "0" }}
+                />
+                <Typography variant="h6" sx={{ zIndex: 50 }}>
+                    Get 20% OFF Mega Sale
+                </Typography>
             </Header>
             <Box
                 sx={{
@@ -58,7 +75,7 @@ const LastSection = () => {
                     boxShadow: 3,
                     display: "flex",
                     flexDirection: "column",
-                    marginTop: '15px'
+                    marginTop: "15px"
                 }}
                 className="slide-in-left"
             >
@@ -70,9 +87,11 @@ const LastSection = () => {
                         component="img"
                         src="summer6.avif"
                         alt="T-shirt"
-                        sx={{ width: "100%", cursor: 'pointer' }}
+                        sx={{ width: "100%", cursor: "pointer" }}
                     />
-                    <Typography variant="body1">Selected size: <span style={{ fontWeight: 'bold' }}>L (Large)</span> </Typography>
+                    <Typography variant="body1">
+                        Selected size: <span style={{ fontWeight: "bold" }}>L (Large)</span>{" "}
+                    </Typography>
                     <Typography variant="body1" component="label" htmlFor="quantity">
                         Quantity
                     </Typography>
@@ -80,7 +99,7 @@ const LastSection = () => {
                         sx={{
                             display: "flex",
                             justifyContent: "space-between",
-                            alignItems: "center",
+                            alignItems: "center"
                         }}
                     >
                         <Paper
@@ -90,14 +109,17 @@ const LastSection = () => {
                             <IconButton onClick={handleDecrement}>
                                 <RemoveIcon />
                             </IconButton>
-                            <Box
-                                sx={{ textAlign: "center", width: 50 }}
-                            >{quantity}</Box>
+                            <Box sx={{ textAlign: "center", width: 50 }}>{quantity}</Box>
                             <IconButton onClick={handleIncrement}>
                                 <AddIcon />
                             </IconButton>
                         </Paper>
-                        <Typography variant="body2">Stock: <span style={{ color: colors.green, fontWeight: 'bold' }}>30</span> </Typography>
+                        <Typography variant="body2">
+                            Stock:{" "}
+                            <span style={{ color: colors.green, fontWeight: "bold" }}>
+                                30
+                            </span>{" "}
+                        </Typography>
                     </Box>
                     <Typography
                         sx={{
@@ -143,7 +165,7 @@ const LastSection = () => {
                 </Content>
             </Box>
             <Box className="slide-in-left">
-            <KeyFeatures  />
+                <KeyFeatures />
             </Box>
         </>
     );

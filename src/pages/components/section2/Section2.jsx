@@ -9,13 +9,13 @@ const Section2 = () => {
         <>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={4.5}>
-                    <LeftSection/>
+                    <LeftSection />
                 </Grid>
                 <Grid item xs={12} md={4.5}>
-                    <RightSection/>
+                    <RightSection />
                 </Grid>
                 <Grid item xs={12} md={3}>
-                    <LastSection/>
+                    <LastSection />
                 </Grid>
             </Grid>
         </>

@@ -1,7 +1,6 @@
-// ReviewSubmissionForm.js
 import React, { useState } from 'react';
 import { Box, TextField, Button, Typography } from '@mui/material';
-import { useReviews } from '../../../../../../context/ReviewsContext'; // Adjust the import path as necessary
+import { useReviews } from '../../../../../../context/ReviewsContext'; 
 import { colors } from '../../../../../../colors/colors';
 
 const ReviewSubmissionForm = () => {
@@ -26,7 +25,7 @@ const ReviewSubmissionForm = () => {
     };
 
     return (
-        <Box sx={{ mb: 4, mt:'24px' }}>
+        <Box sx={{ mb: 4, mt: '24px' }}>
             <Typography variant="h5">Submit Your Review 📖</Typography>
             <form onSubmit={handleSubmit}>
                 <TextField
@@ -59,7 +58,7 @@ const ReviewSubmissionForm = () => {
                     rows={4}
                     required
                 />
-                <Button type="submit" variant="contained" sx={{width:'100%', backgroundColor:colors.green, '&:hover':{backgroundColor:colors.darkBlue}}}>
+                <Button type="submit" variant="contained" sx={{ width: '100%', backgroundColor: colors.green, '&:hover': { backgroundColor: colors.darkBlue } }}>
                     Submit
                 </Button>
             </form>

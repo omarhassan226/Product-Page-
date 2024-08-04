@@ -1,21 +1,20 @@
-// FAQs1.js
 import React from 'react';
 import { Box, Typography, Accordion, AccordionSummary, AccordionDetails, Avatar, IconButton } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import HoverRatingReview from './HoverRatingReview';
 import { colors } from '../../../../../../../../colors/colors';
-import { useReviews } from '../.././../../../../../../context/ReviewsContext'; // Adjust the import path as necessary
+import { useReviews } from '../.././../../../../../../context/ReviewsContext';
 
 const FAQs1 = () => {
 
     const { reviews } = useReviews();
 
     return (
-        <Box sx={{ height: '570px', overflowY: 'scroll', mt:2 }}>
+        <Box sx={{ height: '570px', overflowY: 'scroll', mt: 2 }}>
             {reviews.map((faq, index) => (
-                <Accordion key={index} style={{backgroundColor:colors.fairos, marginBottom:'10px', borderRadius:'20px 0', color:colors.white}}>
-                    <AccordionSummary 
-                        sx={{ padding: '0 !important' }} 
+                <Accordion key={index} style={{ backgroundColor: colors.fairos, marginBottom: '10px', borderRadius: '20px 0', color: colors.white }}>
+                    <AccordionSummary
+                        sx={{ padding: '0 !important' }}
                         expandIcon={<ExpandMoreIcon />}
                     >
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
@@ -32,7 +31,7 @@ const FAQs1 = () => {
                                 {faq.name}
                             </Typography>
                             <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: '10px' }}>
-                                <HoverRatingReview rating={faq.rating}/>
+                                <HoverRatingReview rating={faq.rating} />
                             </Typography>
                         </Box>
                     </AccordionSummary>
